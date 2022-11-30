@@ -1,7 +1,7 @@
 # TiledCellKit
 
 TiledCellKit是一个TableView和CollectionView模型对cell辅助对应关系的iOS的Swift库
-它的基本理念是一种cell对应一种Item，并且通过绑定关系绑定起来，tableView只需要操作item，即可对cell进行定制，达到cell类型和关系比较纯粹的关系
+它的基本理念是一种cell对应一种Item，并且通过绑定关系绑定起来，tableView只需要操作item，即可对cell进行定制，达到cell类型和模型比较纯粹的关系
 
 ## Example
 

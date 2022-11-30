@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  TiledCellKit是一个TableView和CollectionView模型对cell辅助对应关系的iOS的Swift库
+  它的基本理念是一种cell对应一种Item，并且通过绑定关系绑定起来，tableView只需要操作item，即可对cell进行定制，达到cell类型和模型比较纯粹的关系
                        DESC
 
   s.homepage         = 'https://github.com/zhtut/TiledCellKit'
@@ -29,6 +30,7 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
+  s.swift_version = '5.0'
 
   s.source_files = 'TiledCellKit/Classes/**/*'
   
@@ -38,5 +40,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  
 end

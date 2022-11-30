@@ -379,36 +379,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1A9160310870A728E6085CD0FA0BE7B0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 568870B35FF77E336F9D1BA40ABECF65 /* TiledCellKit.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TiledCellKit/TiledCellKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TiledCellKit/TiledCellKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TiledCellKit/TiledCellKit.modulemap";
-				PRODUCT_MODULE_NAME = TiledCellKit;
-				PRODUCT_NAME = TiledCellKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -475,7 +445,7 @@
 			};
 			name = Debug;
 		};
-		7E93E13D0B2767617C6F3DDEAAC48CE4 /* Release */ = {
+		38CFC29165755AC8888B1B66BD6647F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9ADEF64C637B2D4E7353190DD60D65E /* TiledCellKit.release.xcconfig */;
 			buildSettings = {
@@ -498,7 +468,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -633,6 +603,36 @@
 			};
 			name = Release;
 		};
+		F2C67BE9BCF514BEFA8FF2C11849BE7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 568870B35FF77E336F9D1BA40ABECF65 /* TiledCellKit.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TiledCellKit/TiledCellKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TiledCellKit/TiledCellKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TiledCellKit/TiledCellKit.modulemap";
+				PRODUCT_MODULE_NAME = TiledCellKit;
+				PRODUCT_NAME = TiledCellKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -648,8 +648,8 @@
 		49E4AFDD6D9262B736142FE26F9C0AF4 /* Build configuration list for PBXNativeTarget "TiledCellKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A9160310870A728E6085CD0FA0BE7B0 /* Debug */,
-				7E93E13D0B2767617C6F3DDEAAC48CE4 /* Release */,
+				F2C67BE9BCF514BEFA8FF2C11849BE7E /* Debug */,
+				38CFC29165755AC8888B1B66BD6647F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
