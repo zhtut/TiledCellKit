@@ -1,0 +1,16 @@
+PODS:
+  - TiledCellKit (0.1.0)
+
+DEPENDENCIES:
+  - TiledCellKit (from `../`)
+
+EXTERNAL SOURCES:
+  TiledCellKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TiledCellKit: e793cf2086694af53d09917b5f3f4d9830ba6947
+
+PODFILE CHECKSUM: d81ef3ab6fa599201e246a8cb707059c266c2f1a
+
+COCOAPODS: 1.11.3

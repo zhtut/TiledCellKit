@@ -1,0 +1,22 @@
+{
+  "name": "TiledCellKit",
+  "version": "0.1.0",
+  "summary": "一个用于Swift的TableView和CollectionView的管理模型和Cell绑定关系的组件",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zhtut/TiledCellKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zhtut": "tutu.tg.zhou@hstong.com"
+  },
+  "source": {
+    "git": "https://github.com/zhtut/TiledCellKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "TiledCellKit/Classes/**/*"
+}

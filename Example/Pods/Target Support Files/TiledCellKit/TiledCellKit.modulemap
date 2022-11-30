@@ -1,0 +1,6 @@
+framework module TiledCellKit {
+  umbrella header "TiledCellKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
