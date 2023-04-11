@@ -37,7 +37,7 @@ open class TableViewMiddleware: NSObject, UITableViewDelegate, UITableViewDataSo
         return UITableViewCell()
     }
     
-    public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let items = self.items else { return }
         let item = items[indexPath.row]
         if let handler = item.selectedHandler {
