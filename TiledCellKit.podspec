@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TiledCellKit'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = '一个用于Swift的TableView和CollectionView的管理模型和Cell绑定关系的组件'
 
 # This description is used to generate tags and improve search results.
