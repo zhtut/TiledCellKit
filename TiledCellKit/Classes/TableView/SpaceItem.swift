@@ -8,15 +8,19 @@
 import UIKit
 
 /// 空白的一个Item
-open class TableViewSpaceItem: NSObject, Item {
-    public var cellClass: Cell.Type = TableViewSpaceCell.self
+open class SpaceItem: NSObject, Item {
+    public var viewClass: Reusable.Type = SpaceCell.self
     public func height(withViewWidth width: Double) -> Double {
-        return 8.0
+        return height ?? 8.0
+    }
+    public init(height: CGFloat = 8.0) {
+        super.init()
+        self.height = height
     }
 }
 
 /// 空白的cell
-open class TableViewSpaceCell: BaseTableViewCell, Cell {
+open class SpaceCell: BaseTableViewCell, Reusable {
     open override func setup() {
         super.setup()
         selectionStyle = .none

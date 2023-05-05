@@ -13,12 +13,12 @@ public protocol List {
     associatedtype AnyMiddleware: Middleware
     /// 代理中间件
     var mid: AnyMiddleware { get set }
-    func registerItem(_ item: any Item)
+    func registerItem(_ item: Item)
     func setDelegate()
     /// 重新对cell进行赋值
     func reload()
     /// 用Item刷新Cell
-    func reload(item: any Item)
+    func reload(item: Item)
 }
 
 public extension List {

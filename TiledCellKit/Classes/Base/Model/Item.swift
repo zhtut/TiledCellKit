@@ -12,30 +12,29 @@ private var ItemSelectedHandlerKey = "selectedHandler"
 private var TableViewItemCellHeightKey = "height"
 private var CollectionViewItemSizeKey = "size"
 
-public protocol Item: NSObject {
-    /// must
-    var cellClass: Cell.Type { get }
-    
-    /// optional
-    var cell: Cell? { get set }
-    var identifier: String { get }
-    func reload()
-    var selectedHandler: ((_ item: Item) -> Void)? { get set }
-    
+public protocol TableViewHeight {
     // tableView
     var height: Double? { get set }
     func height(withViewWidth width: Double) -> Double
-    
+}
+
+public protocol CollectionViewSize {
     // collectionView
     var size: CGSize? { get set }
     func size(withViewWidth width: Double) -> CGSize
 }
 
+/// 基础模型，Cell
+public protocol Item: NSObject, TableViewHeight, CollectionViewSize, Model {
+    /// must
+    var viewClass: Reusable.Type { get }
+}
+
 public extension Item {
-    var cell: Cell? {
+    var view: Reusable? {
         get {
             if let weakObj = objc_getAssociatedObject(self, &ItemCellKey) as? WeakObject,
-               let cell = weakObj.object as? Cell {
+               let cell = weakObj.object as? Reusable {
                 return cell
             }
             return nil
@@ -49,10 +48,10 @@ public extension Item {
         }
     }
     var identifier: String {
-        "\(cellClass.self)"
+        "\(viewClass.self)"
     }
     func reload() {
-        cell?.reload()
+        view?.reload()
     }
     var selectedHandler: ((_ item: any Item) -> Void)? {
         get {

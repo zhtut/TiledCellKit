@@ -9,13 +9,14 @@ import UIKit
 
 private var CellItemKey = "item"
 
-public protocol Cell {
+/// 可重用的View，有可能是Cell，或者是Header或者Footer
+public protocol Reusable {
     var item: Item? { get set }
     func refresh(_ item: Item?)
     func reload()
 }
 
-public extension Cell {
+public extension Reusable {
     var item: Item? {
         get {
             if let item = objc_getAssociatedObject(self, &CellItemKey) as? Item {
@@ -24,7 +25,7 @@ public extension Cell {
             return nil
         }
         set {
-            newValue?.cell = self
+            newValue?.view = self
             objc_setAssociatedObject(self, &CellItemKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             refresh(newValue)
         }

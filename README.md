@@ -45,7 +45,7 @@ import TiledCellKit
 /// 模型
 class TextItem: NSObject, Item {
     // Item必须实现的协议，指定cell类型，使Item和Cell绑定起来
-    var cellClass: Cell.Type {
+    var viewClass: Cell.Type {
         ListTableViewCell.self
     }
     
