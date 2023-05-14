@@ -28,6 +28,15 @@ public extension List {
             if let mid = objc_getAssociatedObject(self, &MiddlewareKey) as? AnyMiddleware {
                 return mid
             }
+            if let tableView = self as? UITableView {
+                if tableView.style == .plain {
+                    tableView.estimatedRowHeight = 44
+                    tableView.estimatedSectionFooterHeight = 0
+                    tableView.estimatedSectionHeaderHeight = 0
+                    tableView.sectionFooterHeight = 0
+                    tableView.sectionHeaderHeight = 0
+                }
+            }
             let new = AnyMiddleware()
             setNewMid(new)
             return new

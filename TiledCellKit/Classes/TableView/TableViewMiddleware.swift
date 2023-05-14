@@ -115,8 +115,8 @@ open class TableViewMiddleware: NSObject, UITableViewDelegate, UITableViewDataSo
     open func reload(item: any Item) {
         for (index, section) in sections.enumerated() {
             let items = section.items
-            if let index = items.firstIndex(where: { $0 === item }) {
-                let indexPath = IndexPath(row: index, section: index)
+            if let row = items.firstIndex(where: { $0 === item }) {
+                let indexPath = IndexPath(row: row, section: index)
                 if let tableView = view as? UITableView {
                     tableView.reloadRows(at: [indexPath], with: .none)
                 }
