@@ -45,26 +45,37 @@ public extension Middleware {
         set {
             objc_setAssociatedObject(self, &MiddlewareItemsKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             var sections = [Section]()
-            var tempItems = [Item]()
-            for item in newValue {
-                if item is Section || item is SpaceItem {
-                    if tempItems.count > 0 {
-                        sections.append(DefaultSection(items: tempItems))
-                        tempItems.removeAll()
+            let hasSection = items.first(where: {$0 is Section})
+            if hasSection == nil && isTableViewPlain {
+                sections.append(DefaultSection(items: items))
+            } else {
+                var tempItems = [Item]()
+                for item in newValue {
+                    if item is Section || item is SpaceItem {
+                        if tempItems.count > 0 {
+                            sections.append(DefaultSection(items: tempItems))
+                            tempItems.removeAll()
+                        }
+                        if let sec = item as? Section {
+                            sections.append(sec)
+                        } else if let space = item as? SpaceItem {
+                            sections.append(DefaultSection(items: [space]))
+                        }
+                    } else {
+                        tempItems.append(item)
                     }
-                    if let sec = item as? Section {
-                        sections.append(sec)
-                    } else if let space = item as? SpaceItem {
-                        sections.append(DefaultSection(items: [space]))
-                    }
-                } else {
-                    tempItems.append(item)
                 }
+                sections.append(DefaultSection(items: tempItems))
             }
-            sections.append(DefaultSection(items: tempItems))
             self.sections = sections
-            view?.reload()
         }
+    }
+
+    private var isTableViewPlain: Bool {
+        if let view = view as? UITableView {
+            return view.style == .plain
+        }
+        return false
     }
 
     var sections: [Section] {

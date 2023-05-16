@@ -27,5 +27,10 @@ extension UITableView: List {
     public func setDelegate() {
         delegate = mid
         dataSource = mid
+        if style == .plain {
+            estimatedRowHeight = CGFloat.zero
+            estimatedSectionFooterHeight = CGFloat.zero
+            estimatedSectionHeaderHeight = CGFloat.zero
+        }
     }
 }

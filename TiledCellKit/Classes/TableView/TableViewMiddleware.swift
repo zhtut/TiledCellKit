@@ -24,7 +24,8 @@ open class TableViewMiddleware: NSObject, UITableViewDelegate, UITableViewDataSo
         if let height = item.height {
             return height
         } else {
-            return item.height(withViewWidth: tableView.frame.size.width)
+            let height = item.height(withViewWidth: tableView.frame.size.width)
+            return height
         }
     }
 
