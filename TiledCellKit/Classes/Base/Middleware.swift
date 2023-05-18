@@ -127,7 +127,7 @@ public extension Middleware {
     }
 }
 
-extension Middleware {
+public extension Middleware {
 
     var sectionCount: Int {
         sections.count
