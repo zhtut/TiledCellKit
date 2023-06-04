@@ -57,7 +57,7 @@ open class CollectionViewMiddleware: NSObject, UICollectionViewDelegate, UIColle
     }
 
     open func reload(item: any Item) {
-        for (index, section) in sections.enumerated() {
+        for (_, section) in sections.enumerated() {
             let items = section.items
             if let index = items.firstIndex(where: { $0 === item }) {
                 let indexPath = IndexPath(row: index, section: index)

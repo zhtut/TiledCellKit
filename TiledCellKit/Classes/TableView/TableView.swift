@@ -39,7 +39,7 @@ extension UITableView: List {
 public extension UITableView {
 
     /// 反选已选中行
-    open func deselectSelectedRows() {
+    func deselectSelectedRows() {
         if let indexPaths = indexPathsForSelectedRows {
             indexPaths.forEach { indexPath in
                 deselectRow(at: indexPath, animated: true)
